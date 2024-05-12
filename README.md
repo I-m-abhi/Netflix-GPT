@@ -1,15 +1,18 @@
+# Important
+
+- Before starting the project please add .env file and add TMDB_KEY and OPENAI_KEY into it.
+- Or
+- Replace TMDB_KEY and OPENAI_KEY const in constants.js file.
+
 # Netflix GPT
 
 - Create-React-App
 - Configured TailwindCSS
-- Header
 - Routing of App
 - Login Form
 - Sign up Form
 - Form Validation
-- useRef Hook
 - Firebase Setup
-- Deploying app to production
 - Create Signup user Account
 - Implement Sign In user API
 - Created Redux Store with userSlice
@@ -17,9 +20,8 @@
 - Update Profile
 - Fetch from TMDB Movies
 
-
-
 # Features
+
 - Login/Sign Up
   - Sign In / Sign Up Form
   - redirect to browse page
@@ -30,7 +32,6 @@
     - Title & Description
     - Movie Suggestions
       - MovieLists * N
-
 
 # NetflixGPT
   - Search Bar
