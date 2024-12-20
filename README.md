@@ -36,3 +36,7 @@
 # NetflixGPT
   - Search Bar
   - Movie Suggestion
+
+
+# Firebase Setup
+  - Install Firebase  - npm i firebase
