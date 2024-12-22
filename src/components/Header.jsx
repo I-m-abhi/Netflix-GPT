@@ -5,14 +5,14 @@ import { useNavigate } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { addUser, removeUser } from '../utils/userSlice';
-// import { gptSearch } from '../utils/gptSlice';
+import { gptSearch } from '../utils/gptSlice';
 import { SUPPORTED_LANGUAGES } from '../utils/constants';
-// import { changeLang } from '../utils/configSlice';
+import { changeLang } from '../utils/configSlice';
 
 const Header = () => {
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
-  // const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
   const dispatch = useDispatch();
 
   const handleSignOut = () => {
@@ -42,7 +42,7 @@ const Header = () => {
   }, []);
 
   const handleGptSearch = () => {
-    // dispatch(gptSearch());
+    dispatch(gptSearch());
   }
 
   const handleLanguageChange = (e)=> {
@@ -54,7 +54,7 @@ const Header = () => {
       <img className='w-36' src={NetflixLogo} alt="logo" />
       {user && (
         <div className="flex p-2">
-          {/* {showGptSearch && (
+          {showGptSearch && (
             <select
             className="p-2 m-2 bg-gray-900 text-white"
           onChange={handleLanguageChange}
@@ -65,13 +65,13 @@ const Header = () => {
               </option>
             ))}
           </select>
-          )} */}
+          )}
           
           <button
             className="py-2 px-4 mx-4 my-2 bg-purple-800 text-white rounded-lg"
             onClick={handleGptSearch}
           >
-            {/* {showGptSearch ? "Homepage" : "GPT Search"} */}
+            {showGptSearch ? "Homepage" : "GPT Search"}
           </button>
           <img className='w-8' src={user?.photoURL} alt="userIcon" />
           <button onClick={handleSignOut} className="font-bold text-white">(Sign Out)</button>
